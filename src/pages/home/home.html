@@ -6,13 +6,41 @@
 
 <ion-content padding>
   <ion-fab bottom right>
-    <button ion-fab color="primary" (click)="gotoTodoPage()"><ion-icon name="md-create"></ion-icon></button>
+    <button ion-fab color="primary"><ion-icon name="md-create"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="primary" (click)="gotoTodoPage()"><ion-icon name="md-create"></ion-icon></button>
+      <button ion-fab color="danger" (click)="deleteAll()"><ion-icon name="md-trash"></ion-icon></button>
+    </ion-fab-list>
   </ion-fab>
-
-  <div style="display:flex;align-items:center;align-content:center;height:100%">
-    <div style="display:flex;flex-direction:column;align-items:center;">
+  <div style="display:flex;align-items:center;align-content:center;height:100%" *ngIf="!todoList.length">
+    <div style="display:flex;flex-direction:column;align-items:center;align-content:center;">
       <ion-icon name="md-happy" style="font-size:40px"></ion-icon>
       <span style="text-align:center">Hurray! seems like you are free from to-dos. Why don't you keep yourself busy by adding a todo.</span>
     </div>
   </div>
+  <ion-card *ngFor="let todo of todoList; let i = index;">
+  <ion-card-header style="color:white" [style.background-color]="todo.color">
+    {{todo.title}}
+  </ion-card-header>
+  <ion-card-content>
+   <div style="margin-top:10px">
+      {{todo.description}}
+   </div>
+  </ion-card-content>
+  <ion-row no-padding="">
+      <ion-col>
+        
+      </ion-col>
+      <ion-col text-center="">
+        
+      </ion-col>
+      <ion-col text-right="">
+        <button clear="" icon-left="" ion-button="" small="" class="disable-hover button button-ios button-clear button-clear-ios"><span class="button-inner" 
+        (click)="showActionMenu(todo)">
+          <ion-icon name="md-more"></ion-icon>
+          
+        </span><div class="button-effect"></div></button>
+      </ion-col>
+    </ion-row>
+</ion-card>
 </ion-content>

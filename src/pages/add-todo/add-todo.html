@@ -16,11 +16,35 @@
 <ion-content padding>
 
   <ion-item>
-    <ion-input type="text" placeholder="Title" [(ngModel)]="todo.title" ></ion-input>
+    <ion-input type="text" placeholder="Title" [(ngModel)]="todo.title"></ion-input>
   </ion-item>
 
   <ion-item>
-   <ion-textarea rows="6" placeholder="Description" [(ngModel)]="todo.description" ></ion-textarea>
- </ion-item>
-<button ion-button block (click)="createTodo()">Add</button>
+    <ion-textarea rows="2" placeholder="Description" [(ngModel)]="todo.description"></ion-textarea>
+  </ion-item>
+
+  <div style="display:flex; flex-direction:column; margin-top:10px;">
+  <div style="display:flex; flex-direction:row">
+    <button class="button color-button button-default button-default-ios;" style="background-color:#387ef5;" (click)="selectColor('#387ef5')" >
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#387ef5'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#ffc527;" (click)="selectColor('#ffc527')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#ffc527'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#f53d3d;" (click)="selectColor('#f53d3d')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#f53d3d'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#7e60ff;" (click)="selectColor('#7e60ff')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#7e60ff'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#32db64;" (click)="selectColor('#32db64')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#32db64'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#000;" (click)="selectColor('#000')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#000'"></ion-icon>
+  </button>
+
+  </div>
+  </div>
+  <button ion-button block (click)="createTodo()">Add</button>
 </ion-content>
