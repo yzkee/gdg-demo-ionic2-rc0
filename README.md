@@ -1,5 +1,6 @@
 # gdg-demo-ionic2-rc0
 gdg georgetown demo 2016
+slides available at [getting started with ionic2](http://www.slideshare.net/LimYi1/gdg-ionic-2-66893895)
 
 # DevFest Workshop Todo List with Ionic 2 RC0
 This is a simple to-do list application created using ionic 2 to demonstrate some features of ionic 2.
