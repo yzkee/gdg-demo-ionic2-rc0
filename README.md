@@ -24,7 +24,7 @@ This repository contains 2 branches, stage2 and stage3
 ## Running the App
 After cloning the repository, install dependencies required
 
-`$npm install`
+`$ npm install`
 
 Then add NativeStorage to your app
 
