@@ -22,7 +22,11 @@ This repository contains 2 branches, stage2 and stage3
 2. stage3 - contains the completed sample including NativeStorage to store todoList, action sheets, FAB list
 
 ## Running the App
-After cloning the repository install NativeStorage
+After cloning the repository, install dependencies required
+
+`$npm install`
+
+Then add NativeStorage to your app
 
 `$ ionic plugin add cordova-plugin-nativestorage`
 
