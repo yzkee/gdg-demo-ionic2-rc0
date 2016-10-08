@@ -19,6 +19,7 @@ $ ionic -v
 
 ## Code Branches
 This repository contains 2 branches, stage2 and stage3
+
 1. stage2 - contains the home page, and the add to-do page
 2. stage3 - contains the completed sample including NativeStorage to store todoList, action sheets, FAB list
 
