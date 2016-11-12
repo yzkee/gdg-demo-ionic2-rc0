@@ -1,0 +1,63 @@
+<!--
+  Generated template for the AddTodo page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a to-do</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input type="text" placeholder="Name" [(ngModel)]="todo.Name"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label>Date</ion-label>
+  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="todo.StartDate"></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label>Time</ion-label>
+  <ion-datetime displayFormat="HH:mm" [(ngModel)]="todo.StartTime"></ion-datetime>
+</ion-item>
+<ion-item>
+    <ion-input type="text" placeholder="StartPoint" [(ngModel)]="todo.StartPoint"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-input type="text" placeholder="EndPoint" [(ngModel)]="todo.EndPoint"></ion-input>
+  </ion-item>
+ <ion-item>
+    <ion-textarea rows="2" placeholder="Remarks" [(ngModel)]="todo.Remarks"></ion-textarea>
+  </ion-item>
+
+  <div style="display:flex; flex-direction:column; margin-top:10px;">
+  <div style="display:flex; flex-direction:row">
+    <button class="button color-button button-default button-default-ios;" style="background-color:#387ef5;" (click)="selectColor('#387ef5')" >
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#387ef5'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#ffc527;" (click)="selectColor('#ffc527')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#ffc527'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#f53d3d;" (click)="selectColor('#f53d3d')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#f53d3d'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#7e60ff;" (click)="selectColor('#7e60ff')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#7e60ff'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#32db64;" (click)="selectColor('#32db64')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#32db64'"></ion-icon>
+  </button>
+  <button class="button color-button button-default button-default-ios;" style="background-color:#000;" (click)="selectColor('#000')">
+      <ion-icon name="md-checkmark" *ngIf="todo.color == '#000'"></ion-icon>
+  </button>
+
+  </div>
+  </div>
+  <button ion-button block (click)="createTodo()">Add</button>
+</ion-content>
