@@ -44,3 +44,8 @@ Run the application in your android device
 
 `$ionic run android`
 
+Run Ionic App LiveReload Command :
+
+`$ionic run android -l -c -s`
+ 
+
